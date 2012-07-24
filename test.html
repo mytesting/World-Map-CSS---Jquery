@@ -1,0 +1,52 @@
+
+<link rel="stylesheet" type="text/css" media="screen,projection" href="cssmap-continents/cssmap-continents.css" />
+<script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="http://dl.dropbox.com/u/18926497/jquery.cssmap.js"></script> 
+
+<style type="text/css">
+.block{ display:none}
+.block:first-child{ display:block}
+ul, li { list-style-type: none !important;
+         background: none; }
+</style>
+
+<script type="text/javascript">
+$(function($){
+$('#map-continents').cssMap({'size' : 430});
+});
+</script>  
+
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$(document).ready(function(){
+    
+    $('#map-continents li').click(function(){
+      var index=$('#map-continents li').index(this);
+      $('.block').hide();
+      $('.block').eq(index).show();
+    });
+    
+});
+});//]]>  
+
+</script> 
+
+<div id="map-continents">
+	<ul class="continents">
+		<li class="c1"><a href="#africa">Africa</a></li>
+		<li class="c2"><a href="#asia">Asia</a></li>
+		<li class="c3"><a href="#australia">Australia</a></li>
+		<li class="c4"><a href="#europe">Europe</a></li>
+		<li class="c5"><a href="#north-america">North America</a></li>
+		<li class="c6"><a href="#south-america">South America</a></li>
+	</ul>
+</div>
+
+<div id="holder">
+	<div class="block">Africa</div>
+	<div class="block">Asia</div>
+	<div class="block">Australia</div>
+	<div class="block">Europe</div>
+	<div class="block">North America</div>
+	<div class="block">South America</div>
+</div>
